@@ -119,6 +119,7 @@ public class Screen extends JPanel implements Runnable, KeyListener {
     public void stop() {
         running = false;
         setVisible(false);
+        Menu.scores.add(size-5);
         final Frame[] frames = Frame.getFrames();
         for (final Frame frame : frames) {
             if (frame.isVisible() && frame.isActive()) {
@@ -166,7 +167,6 @@ public class Screen extends JPanel implements Runnable, KeyListener {
             down = true;
         }
     }
-
 
     public void keyReleased(KeyEvent arg0) {
     }
